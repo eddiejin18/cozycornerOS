@@ -35,44 +35,7 @@ export function Toolbox() {
         }}
       >
         {/* Spotify Tool */}
-        <div
-          className="spotify-tool"
-          style={{
-            width: "50px",
-            height: "50px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-            background: "none",
-            border: "none",
-            padding: "0",
-            minWidth: "auto",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform =
-              "translateY(-10px) translateX(-4px) rotate(-10deg)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform =
-              "translateY(0) translateX(0) rotate(0deg)";
-          }}
-          onClick={() => handleToolClick("spotify")}
-        >
-          <img
-            src="/spotifyLogo.png"
-            alt="Spotify"
-            className="spotify-logo-tool"
-            style={{
-              width: "32px",
-              height: "32px",
-              borderRadius: "6px",
-              transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-              cursor: "pointer",
-            }}
-          />
-        </div>
+        <SpotifyPlaylistTool onClose={() => setActiveTool(null)} />
 
         {/* Add Text Tool */}
         <div
