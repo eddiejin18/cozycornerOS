@@ -1,0 +1,462 @@
+/* Retro OS Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: white;
+    overflow: hidden;
+    height: 100vh;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+.infinite-canvas {
+    width: 20000px;
+    height: 20000px;
+    position: absolute;
+    top: -9000px;
+    left: -9000px;
+    background: white;
+    cursor: grab;
+    will-change: transform;
+    transform-origin: 0 0;
+}
+
+.infinite-canvas:active {
+    cursor: grabbing;
+}
+
+
+.desktop-icon {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.desktop-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.desktop-icon:active {
+    transform: scale(0.95);
+}
+
+.icon-image {
+    font-size: 32px;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.icon-label {
+    font-size: 8px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.3);
+    padding: 2px 4px;
+    border-radius: 4px;
+    max-width: 80px;
+    word-wrap: break-word;
+}
+
+.taskbar {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60px !important;
+    background: linear-gradient(180deg, #4a5568 0%, #2d3748 100%);
+    border-top: 2px solid #68d391;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000 !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+    transform: scale(1) !important;
+    transform-origin: bottom center !important;
+    will-change: auto;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(180deg, #68d391 0%, #48bb78 100%);
+    border: 2px solid #38a169;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+}
+
+.start-button:hover {
+    background: linear-gradient(180deg, #9ae6b4 0%, #68d391 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.start-icon {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.start-text {
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.taskbar-items {
+    flex: 1;
+    display: flex;
+    gap: 5px;
+    margin: 0 10px;
+}
+
+.taskbar-item {
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 8px;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.taskbar-item:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.taskbar-item.active {
+    background: rgba(104, 211, 145, 0.3);
+    border-color: #68d391;
+}
+
+.system-tray {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tray-item {
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tray-item:hover {
+    transform: scale(1.2);
+}
+
+/* Window Styling */
+.window {
+    position: absolute;
+    background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+    border: 2px solid #4a5568;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    min-width: 300px;
+    min-height: 200px;
+    z-index: 100;
+    resize: both;
+    overflow: hidden;
+    transform: scale(1) !important;
+    transform-origin: top left !important;
+    pointer-events: auto;
+    will-change: auto;
+}
+
+.window-header {
+    background: linear-gradient(180deg, #68d391 0%, #48bb78 100%);
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    border-bottom: 1px solid #38a169;
+}
+
+.window-title {
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.window-controls {
+    display: flex;
+    gap: 4px;
+}
+
+.window-controls button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #2d3748;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #e2e8f0 0%, #cbd5e0 100%);
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.window-controls button:hover {
+    background: linear-gradient(180deg, #f7fafc 0%, #e2e8f0 100%);
+}
+
+.close-btn:hover {
+    background: linear-gradient(180deg, #fed7d7 0%, #feb2b2 100%);
+    color: #c53030;
+}
+
+.window-content {
+    padding: 16px;
+    height: calc(100% - 40px);
+    overflow: auto;
+    background: #f7fafc;
+}
+
+.hidden {
+    display: none;
+}
+
+/* App-specific styles */
+.app-content {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    line-height: 1.4;
+    color: #2d3748;
+}
+
+.notepad-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    line-height: 1.4;
+    color: #2d3748;
+    resize: none;
+    outline: none;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 200px;
+}
+
+.calc-display {
+    grid-column: 1 / -1;
+    background: #2d3748;
+    color: #68d391;
+    padding: 8px;
+    text-align: right;
+    font-size: 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.calc-btn {
+    padding: 8px;
+    background: linear-gradient(180deg, #e2e8f0 0%, #cbd5e0 100%);
+    border: 1px solid #a0aec0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    transition: all 0.2s ease;
+}
+
+.calc-btn:hover {
+    background: linear-gradient(180deg, #f7fafc 0%, #e2e8f0 100%);
+    transform: translateY(-1px);
+}
+
+.calc-btn:active {
+    transform: translateY(0);
+}
+
+/* Cute animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.desktop-icon:hover .icon-image {
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.start-icon {
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Zoom Controls */
+.zoom-controls {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1001 !important;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    transform: scale(1) !important;
+    transform-origin: top right !important;
+    pointer-events: auto;
+    will-change: auto;
+}
+
+.zoom-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #68d391 0%, #48bb78 100%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-btn:hover {
+    background: linear-gradient(180deg, #9ae6b4 0%, #68d391 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.zoom-level {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    color: #2d3748;
+    text-align: center;
+    background: rgba(104, 211, 145, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 50px;
+}
+
+/* HUD Elements - Completely isolated from canvas zoom */
+.taskbar,
+.zoom-controls,
+.window,
+.desktop-icon {
+    transform: scale(1) !important;
+    transform-origin: initial !important;
+    will-change: auto !important;
+    backface-visibility: visible !important;
+    isolation: isolate !important;
+    contain: layout style paint !important;
+}
+
+/* Create separate stacking context for HUD */
+.taskbar,
+.zoom-controls {
+    isolation: isolate !important;
+    contain: layout style paint !important;
+}
+
+/* Performance optimizations */
+.desktop-icon {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.window {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Smooth scrolling for better performance */
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .desktop-icon {
+        width: 60px;
+        height: 80px;
+    }
+    
+    .icon-image {
+        font-size: 24px;
+    }
+    
+    .icon-label {
+        font-size: 6px;
+    }
+    
+    .taskbar {
+        height: 50px;
+    }
+    
+    .start-text {
+        font-size: 8px;
+    }
+    
+    .zoom-controls {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .zoom-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .zoom-level {
+        font-size: 6px;
+    }
+}

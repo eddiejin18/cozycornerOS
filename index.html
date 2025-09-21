@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CozyCorner OS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="desktop" class="desktop">
+        <!-- Infinite canvas background -->
+        <div id="canvas" class="infinite-canvas">
+            
+            <!-- Desktop icons will be added here -->
+            <div class="desktop-icon" style="left: 100px; top: 100px;" data-app="notepad">
+                <div class="icon-image">📝</div>
+                <div class="icon-label">Notepad</div>
+            </div>
+            
+            <div class="desktop-icon" style="left: 200px; top: 100px;" data-app="calculator">
+                <div class="icon-image">🧮</div>
+                <div class="icon-label">Calculator</div>
+            </div>
+            
+            <div class="desktop-icon" style="left: 300px; top: 100px;" data-app="paint">
+                <div class="icon-image">🎨</div>
+                <div class="icon-label">Paint</div>
+            </div>
+            
+            <div class="desktop-icon" style="left: 100px; top: 200px;" data-app="snake">
+                <div class="icon-image">🐍</div>
+                <div class="icon-label">Snake Game</div>
+            </div>
+            
+            <div class="desktop-icon" style="left: 200px; top: 200px;" data-app="tetris">
+                <div class="icon-image">🧩</div>
+                <div class="icon-label">Tetris</div>
+            </div>
+        </div>
+        
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button">
+                <span class="start-icon">🌸</span>
+                <span class="start-text">Start</span>
+            </div>
+            <div class="taskbar-items">
+                <!-- Open windows will appear here -->
+            </div>
+            <div class="system-tray">
+                <div class="tray-item">🕐</div>
+                <div class="tray-item">🔊</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Window templates -->
+    <div id="window-template" class="window hidden">
+        <div class="window-header">
+            <div class="window-title"></div>
+            <div class="window-controls">
+                <button class="minimize-btn">−</button>
+                <button class="maximize-btn">□</button>
+                <button class="close-btn">×</button>
+            </div>
+        </div>
+        <div class="window-content"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
