@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,12 +21,26 @@ body,
 }
 
 body {
-  font-family: "Press Start 2P", monospace;
+  font-family: "Orbitron", "Courier New", monospace;
   overflow: hidden;
   height: 100vh;
   user-select: none;
-  background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
-  background-size: 20px 20px;
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8e4d8 50%, #d4c5a0 100%);
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(212, 197, 160, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(184, 166, 128, 0.2) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(139, 115, 85, 0.1) 0%,
+      transparent 70%
+    );
 }
 
 /* Retro animations */
@@ -65,15 +80,30 @@ body {
 /* Custom Tailwind components */
 @layer components {
   .toolbox {
-    @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 flex gap-5 bg-white/95 p-5 rounded-3xl shadow-2xl backdrop-blur-lg border border-white/20 z-[1001] pointer-events-auto;
+    @apply fixed bottom-4 left-1/2 transform -translate-x-1/2 flex gap-5 p-5 rounded-3xl shadow-2xl backdrop-blur-lg z-[1001] pointer-events-auto;
+    background: linear-gradient(145deg, #f8f6f0, #e8e4d8);
+    border: 3px solid #d4c5a0;
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      inset 0 2px 4px rgba(255, 255, 255, 0.8);
   }
 
   .tool-item {
-    @apply flex flex-col items-center cursor-pointer p-4 rounded-2xl bg-white/80 border border-black/10 transition-all duration-300 min-w-20 text-center;
+    @apply flex flex-col items-center cursor-pointer p-4 rounded-2xl transition-all duration-300 min-w-20 text-center;
+    background: linear-gradient(145deg, #f8f6f0, #e8e4d8);
+    border: 2px solid #d4c5a0;
+    color: #5a4a3a;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(255, 255, 255, 0.8);
   }
 
   .tool-item:hover {
-    @apply -translate-y-2 bg-white shadow-lg border-green-300;
+    background: linear-gradient(145deg, #e8e4d8, #d4c5a0);
+    transform: translateY(-2px);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 2px rgba(255, 255, 255, 0.8);
   }
 
   .tool-icon {
@@ -93,19 +123,19 @@ body {
   }
 
   .spotify-tool:hover .spotify-logo-tool {
-    @apply shadow-lg shadow-green-500/30;
+    @apply shadow-lg shadow-amber-500/30;
   }
 
   .taskbar {
-    @apply fixed bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-gray-600 to-gray-500 border-t-2 border-green-400 flex items-center px-2 z-[1000] shadow-lg;
+    @apply fixed bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-amber-600 to-amber-500 border-t-2 border-amber-400 flex items-center px-2 z-[1000] shadow-lg;
   }
 
   .start-button {
-    @apply flex items-center px-4 py-2 bg-gradient-to-b from-green-400 to-green-500 border-2 border-green-600 rounded-lg cursor-pointer transition-all duration-200 mr-2;
+    @apply flex items-center px-4 py-2 bg-gradient-to-b from-amber-400 to-amber-500 border-2 border-amber-600 rounded-lg cursor-pointer transition-all duration-200 mr-2;
   }
 
   .start-button:hover {
-    @apply bg-gradient-to-b from-green-300 to-green-400 -translate-y-0.5 shadow-md;
+    @apply bg-gradient-to-b from-amber-300 to-amber-400 -translate-y-0.5 shadow-md;
   }
 
   .desktop-icon {
@@ -117,7 +147,7 @@ body {
   }
 
   .zoom-controls {
-    @apply fixed top-5 right-5 flex flex-col items-center gap-2 bg-white/90 backdrop-blur-lg p-3 rounded-xl shadow-lg z-[1001];
+    @apply fixed top-5 right-5 flex flex-col items-center gap-2 bg-amber-50/90 backdrop-blur-lg p-3 rounded-xl shadow-lg z-[1001];
   }
 
   /* Cozy Spotify Modal Styles */

@@ -1,11 +1,11 @@
 "use client";
 
-import { SpotifyModal } from "../SpotifyModal";
+import { RetroSpotifyPlayer } from "../RetroSpotifyPlayer";
 
 interface SpotifyPlaylistToolProps {
   onClose: () => void;
 }
 
 export function SpotifyPlaylistTool({ onClose }: SpotifyPlaylistToolProps) {
-  return <SpotifyModal onClose={onClose} />;
+  return <RetroSpotifyPlayer onClose={onClose} />;
 }

@@ -70,7 +70,7 @@ export function ZoomControls({
           height: "40px",
           border: "none",
           borderRadius: "8px",
-          background: "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)",
+          background: "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)",
           color: "white",
           fontSize: "18px",
           fontWeight: "bold",
@@ -83,13 +83,13 @@ export function ZoomControls({
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #9ae6b4 0%, #68d391 100%)";
+            "linear-gradient(to bottom, #e8e4d8 0%, #d4a574 100%)";
           e.currentTarget.style.transform = "translateY(-2px)";
           e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)";
+            "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)";
           e.currentTarget.style.transform = "translateY(0)";
           e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
         }}
@@ -99,7 +99,7 @@ export function ZoomControls({
 
       <div
         style={{
-          fontFamily: "Press Start 2P, monospace",
+          fontFamily: "Orbitron, monospace",
           fontSize: "10px",
           color: "#4a5568",
           textAlign: "center",
@@ -120,7 +120,7 @@ export function ZoomControls({
           height: "40px",
           border: "none",
           borderRadius: "8px",
-          background: "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)",
+          background: "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)",
           color: "white",
           fontSize: "18px",
           fontWeight: "bold",
@@ -133,13 +133,13 @@ export function ZoomControls({
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #9ae6b4 0%, #68d391 100%)";
+            "linear-gradient(to bottom, #e8e4d8 0%, #d4a574 100%)";
           e.currentTarget.style.transform = "translateY(-2px)";
           e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)";
+            "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)";
           e.currentTarget.style.transform = "translateY(0)";
           e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
         }}
@@ -154,7 +154,7 @@ export function ZoomControls({
           height: "40px",
           border: "none",
           borderRadius: "8px",
-          background: "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)",
+          background: "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)",
           color: "white",
           fontSize: "18px",
           fontWeight: "bold",
@@ -167,13 +167,13 @@ export function ZoomControls({
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #9ae6b4 0%, #68d391 100%)";
+            "linear-gradient(to bottom, #e8e4d8 0%, #d4a574 100%)";
           e.currentTarget.style.transform = "translateY(-2px)";
           e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.background =
-            "linear-gradient(to bottom, #68d391 0%, #48bb78 100%)";
+            "linear-gradient(to bottom, #d4a574 0%, #c4a574 100%)";
           e.currentTarget.style.transform = "translateY(0)";
           e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
         }}

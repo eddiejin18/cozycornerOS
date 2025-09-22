@@ -19,7 +19,7 @@ export function WelcomeMessage() {
           color: "white",
           filter: "drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5))",
           marginBottom: "20px",
-          fontFamily: "Press Start 2P, monospace",
+          fontFamily: "Orbitron, monospace",
         }}
       >
         🌸 Welcome to CozyCorner OS 🌸
@@ -31,7 +31,7 @@ export function WelcomeMessage() {
           color: "white",
           filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5))",
           marginBottom: "4px",
-          fontFamily: "Press Start 2P, monospace",
+          fontFamily: "Orbitron, monospace",
         }}
       >
         Double-click icons to open apps
@@ -42,7 +42,7 @@ export function WelcomeMessage() {
           opacity: "0.8",
           color: "white",
           filter: "drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5))",
-          fontFamily: "Press Start 2P, monospace",
+          fontFamily: "Orbitron, monospace",
         }}
       >
         Drag to explore the infinite canvas
